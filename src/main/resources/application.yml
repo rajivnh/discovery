@@ -1,0 +1,19 @@
+server:
+  port: 83
+  
+spring:
+  application:
+    name: discovery
+
+eureka:
+  client:
+    region: default
+    service-url:
+      defaultZone: http://127.0.0.1:83/eureka  
+    fetch-remote-regions-registry: true
+    enabled: true
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0
+    max-threads-for-peer-replication: 0
